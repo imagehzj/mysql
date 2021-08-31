@@ -4,6 +4,8 @@ LABEL maintainer="shoothzj@gmail.com"
 
 WORKDIR /opt/sh
 
+ENV MYSQL_HOME /opt/sh/mysql
+
 RUN wget https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm && \
 yum localinstall -y mysql80-community-release-el8-1.noarch.rpm && \
 rm -rf mysql80-community-release-el8-1.noarch.rpm && \
